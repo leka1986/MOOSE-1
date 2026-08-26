@@ -3325,6 +3325,14 @@ function CONTROLLABLE:QueryCachedOption(OptionID)
   return nil
 end
 
+--- Reset cached options for this controllable.
+-- @param #CONTROLLABLE self
+-- @return #CONTROLLABLE self
+function CONTROLLABLE:ResetOptionCache()
+  self.ControllableOptions = {}
+  return self
+end
+
 --- Set option for Rules of Engagement (ROE).
 -- @param #CONTROLLABLE self
 -- @param #number ROEvalue ROE value. See ENUMS.ROE.
